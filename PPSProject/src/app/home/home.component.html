@@ -2,16 +2,36 @@
     <div class="heading-box">
         <h1>Witamy w <span>PRO</span>GAMERS!</h1>
         <p>Tutaj wszyscy gracze są jedną, wielką rodziną!</p>
+        <div class="buttons">
+            <button class="btn btn-login" [routerLink]="'/register'">ZAREJESTRUJ SIĘ</button>
+            <button class="btn btn-games" [routerLink]="'#'">PRZEGLĄDAJ GRY</button>
+        </div>
     </div>
 </section>
 
 <section class="section-about" id="section-about">
     <div class="row">
-        <h1>Kilka słów o portalu</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque fugiat possimus sed enim ipsa fuga debitis nemo saepe veritatis consequatur numquam necessitatibus culpa recusandae omnis officia, obcaecati, nobis voluptas reprehenderit, assumenda ad. Ipsum praesentium odit asperiores error pariatur saepe fugit?</p>
-
-        <div class="about-box">
-            
+        <div class="wrapper-heading">   
+            <h1>Kilka słów o portalu</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque fugiat possimus sed enim ipsa fuga debitis nemo saepe veritatis consequatur numquam necessitatibus culpa recusandae omnis officia, obcaecati, nobis voluptas reprehenderit, assumenda ad. Ipsum praesentium odit asperiores error pariatur saepe fugit?</p>
+        </div> 
+        <div class="wrapper-boxes">
+            <div class="about-box">
+                <fa-icon [icon]="faGamepad"></fa-icon>
+                <h3>Baza gier</h3>
+                <p>Tylko na naszym poratalu znajdziesz najwiekszą bazę gier na wszystkie platformy.</p>
+            </div>  
+            <div class="about-box">
+                <fa-icon [icon]="faStar"></fa-icon>
+                <h3>Recenzje</h3>
+                <p>Jesteś zapalonym graczem? Dziel się swoimi odczuciami i recenzuj gry aby inni mieli łatwiej w wyborze!</p>
+            </div>  
+            <div class="about-box">
+                <fa-icon [icon]="faUsers"></fa-icon>
+                <h3>Forum</h3>
+                <p>Wejdź na nasze forum i udzielaj się w dyskusjach na przróżne tematu w świecie gamingu!</p>
+            </div>
         </div>  
     </div>
 </section>
+

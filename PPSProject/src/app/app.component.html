@@ -1,8 +1,8 @@
 <nav>
-  <a href="#" class="logo"><span>PRO</span>GAMERS</a>
+  <a href="/home" class="logo"><fa-icon [icon]="faHeadphones"></fa-icon><span>PRO</span>GAMERS</a>
   <ul class="nav-list">
     <li class="nav-item">
-      <a href="#section-hero">strona główna</a>
+      <a href="/home">strona główna</a>
     </li>
     <li class="nav-item">
       <a href="#">gry</a>
@@ -11,8 +11,20 @@
       <a href="#">forum</a>
     </li>
     <li class="nav-item">
-      <a href="#">log in</a>
+      <a href="/login">zaloguj</a>
     </li>
   </ul>
 </nav>
 <router-outlet></router-outlet>
+
+<footer>
+  <div class="row">
+    <ul class="footer-nav">
+      <li class="footer-nav-item"><a href="#">Strona główna</a></li>
+      <li class="footer-nav-item"><a href="#">Gry</a></li>
+      <li class="footer-nav-item"><a href="#">Forum</a></li>
+      <li class="footer-nav-item"><a href="#">Zaloguj</a></li>
+    </ul>
+    <p>All rights reserved &copy; PROGAMERS 2020</p>
+  </div>
+</footer>
