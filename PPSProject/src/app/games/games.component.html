@@ -1,0 +1,62 @@
+<section class="games-hero">
+    <video autoplay muted loop class="myVideo">
+        <source src="../../assets/videos/Keyboard - 31806.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    <div class="header-box">
+        <h1>Największa baza gier w sieci!</h1>
+        <p>Przeglądaj, oceniaj, recenzuj, komentuj!</p>
+        <button (click)="scrollToCat()" class="btn btn-login">PRZEGLĄDAJ GRY</button>
+    </div>
+    <div class="images-box">
+        <div class="image-box">
+            <div class="shadow-box">
+                <div class="shadow"></div>
+                <img src="../../assets/images/games-gallery/game1.jpg" alt="Game screenshot">
+            </div>
+        </div>
+        <div class="image-box">
+            <div class="shadow-box">
+                <div class="shadow"></div>
+                <img src="../../assets/images/games-gallery/game2.jpg" alt="Game screenshot">
+            </div>
+            <div class="shadow-box">
+                <div class="shadow"></div>
+                <img src="../../assets/images/games-gallery/game3.jpg" alt="Game screenshot">
+            </div>
+        </div>
+        <div class="image-box">
+            <div class="shadow-box">
+                <div class="shadow"></div>
+                <img src="../../assets/images/games-gallery/game4.jpg" alt="Game screenshot">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section-categories">
+    <app-categories></app-categories>
+    <div class="container">
+        <h1>Wybierz gatunek</h1>
+        <div class="cat-box" [routerLink]="'/register'">
+            <h2><fa-icon [icon]="faFistsRaised"></fa-icon>BIJATYKI<fa-icon [icon]="faFistsRaised"></fa-icon></h2>
+            <p>Gry, w których toczymy walki na różnego rodzaju arenach.</p>
+        </div>
+        <div class="cat-box" [routerLink]="'/register'">
+            <h2><fa-icon [icon]="faFistsRaised"></fa-icon>BIJATYKI<fa-icon [icon]="faFistsRaised"></fa-icon></h2>
+            <p>Gry, w których toczymy walki na różnego rodzaju arenach.</p>
+        </div>
+        <div class="cat-box" [routerLink]="'/register'">
+            <h2><fa-icon [icon]="faFistsRaised"></fa-icon>BIJATYKI<fa-icon [icon]="faFistsRaised"></fa-icon></h2>
+            <p>Gry, w których toczymy walki na różnego rodzaju arenach.</p>
+        </div>
+        <div class="cat-box" [routerLink]="'/register'">
+            <h2><fa-icon [icon]="faFistsRaised"></fa-icon>BIJATYKI<fa-icon [icon]="faFistsRaised"></fa-icon></h2>
+            <p>Gry, w których toczymy walki na różnego rodzaju arenach.</p>
+        </div>
+        <div class="cat-box" [routerLink]="'/register'">
+            <h2><fa-icon [icon]="faFistsRaised"></fa-icon>BIJATYKI<fa-icon [icon]="faFistsRaised"></fa-icon></h2>
+            <p>Gry, w których toczymy walki na różnego rodzaju arenach.</p>
+        </div>
+    </div> 
+</section>
+

@@ -2,31 +2,34 @@
     <div class="register-box">
         <h1>Zarejestruj się</h1>
         <p>Podaj poprawne dane. Wszystkie pola są wymagane!</p>
-        <div class="data-row">
-            <div class="data-row-half">
-                <label for="firstName" class="label-class">Imię:</label>
-                <input type="text" id="firstName" class="input-class">
+        <form (submit)="registerUser()" class="form-row">
+            <div class="data-row">
+                <div class="data-row-half">
+                    <label for="firstName" class="label-class">Imię:</label>
+                    <input type="text" [(ngModel)]="first_name" name="first_name" id="firstName" class="input-class" required>
 
-                <label for="lastName" class="label-class">Nazwisko:</label>
-                <input type="text" id="lastName" class="input-class">
+                    <label for="lastName" class="label-class">Nazwisko:</label>
+                    <input type="text" [(ngModel)]="last_name" name="last_name" id="lastName" class="input-class">
 
-                <label for="nickName" class="label-class">Login:</label>
-                <input type="text" id="nickName" class="input-class">
+                    <label for="nickName" class="label-class">Login:</label>
+                    <input type="text" [(ngModel)]="login" name="login" id="nickName" class="input-class">
+                </div>
+
+                <div class="data-row-half">
+                    <label for="e-mail" class="label-class">E-mail:</label>
+                    <input type="text" [(ngModel)]="e_mail" name="e_mail" id="e-mail" class="input-class">
+
+                    <label for="password" class="label-class">Hasło:</label>
+                    <input type="password" [(ngModel)]="password" name="password" id="password" class="input-class">
+
+                    <label for="password-rep" class="label-class">Potwierdź hasło:</label>
+                    <input type="password" id="password-rep" class="input-class">
+                </div>
             </div>
-
-            <div class="data-row-half">
-                <label for="e-mail" class="label-class">E-mail:</label>
-                <input type="text" id="e-mail" class="input-class">
-
-                <label for="password" class="label-class">Hasło:</label>
-                <input type="text" id="password" class="input-class">
-
-                <label for="password-rep" class="label-class">Potwierdź hasło:</label>
-                <input type="text" id="password-rep" class="input-class">
-            </div>
-        </div>
-        <button class="btn btn-register">ZAREJESTRUJ</button>
-        <button class="btn btn-cancel">ANULUJ</button>
+            <input type="submit" class="btn btn-register" value="ZAREJESTRUJ SIĘ">
+            <button [routerLink]="'/home'" class="btn btn-cancel">ANULUJ</button>
+        </form>
+        <!-- <button (click)="registerUser()" class="btn btn-register">ZAREJESTRUJ</button> -->
         <p class="no-account">Masz konto na naszym portalu? <a href="/login">Zaloguj się!</a></p>
     </div>
 </section>

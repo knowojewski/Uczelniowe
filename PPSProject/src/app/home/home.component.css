@@ -23,8 +23,8 @@ Blue - #2a6bf8
     width: 800px;
     height: 400px;
     border-radius: 15px;
-    border: 1px solid #2a6bf8;
-    box-shadow: 0 0 40px 5px #2a6bf8;
+    /* box-shadow: 0 0 40px 5px #2a6bf8; */
+    animation: shadow-anim 4s linear alternate infinite;
 }
 
 .heading-box h1 {
@@ -192,4 +192,29 @@ Blue - #2a6bf8
     color: #fff;
     background-color: #2a6bf8;
     box-shadow: 0 0 20px 5px #2a6bf8;
+}
+
+
+@keyframes shadow-anim {
+    0% {
+        box-shadow: 0 0 5px 1px #2a6bf8;
+    }
+    20% {
+        box-shadow: 0 0 25px 5px #3474ff;
+    }
+    40% {
+        box-shadow: 0 0 15px 5px #3072ff;
+    }
+    60% {
+        box-shadow: 0 0 45px 5px #4781ff;
+    }
+    80% {
+        box-shadow: 0 0 35px 5px #3b79ff;
+    }
+    90% {
+        box-shadow: 0 0 45px 5px #427eff;
+    }
+    100% {
+        box-shadow: 0 0 60px 15px #4983ff;
+    }
 }
