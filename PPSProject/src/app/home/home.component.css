@@ -1,0 +1,45 @@
+/* COLORS 
+Blue - #2a6bf8
+*/
+
+.section-hero {
+    width: 100%;
+    height: 100vh;
+    background-color: #333333;
+    background-image: linear-gradient(hsla(0, 0%, 0%, 0.774), hsla(0, 0%, 0%, 0.8)), url(../../assets/images/hero-img-small.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: 400px;
+}
+
+.heading-box h1 {
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.heading-box h1 span {
+    color: #2a6bf8;
+}
+
+.heading-box p {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.section-about {
+    height: 100vh;
+}
