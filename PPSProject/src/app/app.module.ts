@@ -13,6 +13,7 @@ import { ForumComponent } from './forum/forum.component';
 import { CategoriesComponent } from './games/categories/categories.component';
 import { CategoriesMainComponent } from './games/categories-main/categories-main.component';
 import { CategoryGamesComponent } from './games/category-games/category-games.component';
+import { GameDetailsComponent } from './games/game-details/game-details.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CategoryGamesComponent } from './games/category-games/category-games.co
     ForumComponent,
     CategoriesComponent,
     CategoriesMainComponent,
-    CategoryGamesComponent
+    CategoryGamesComponent,
+    GameDetailsComponent
   ],
   imports: [
     BrowserModule,

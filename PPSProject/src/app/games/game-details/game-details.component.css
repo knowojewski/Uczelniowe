@@ -1,0 +1,153 @@
+/* #2a6bf8 */
+
+.container {
+    background: linear-gradient(to bottom right, rgb(39, 39, 39), #091e58);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-box {
+    background: #0000008f;
+    width: 60%;
+    height: 100%;
+}
+
+.image-box {
+    overflow: hidden;
+    width: 80%;
+    height: 500px;
+    margin: 40px auto;
+    box-shadow: 0 0 10px 1px #ffffff;
+    border-radius: 5px;
+
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.row {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.title {
+    font-weight: 400;
+    font-size: 40px;
+    text-align: center;
+    color: #eeeeee;
+    margin-bottom: 40px;
+}
+
+.description {
+    text-align: justify;
+    font-size: 20px;
+    color: #eeeeee;
+    margin-bottom: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    line-height: 140%;
+}
+
+.infos {
+    /* background-color: rgba(255, 255, 255, 0.747); */
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    color: #eeeeee;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 1px #2a6bf8;
+}
+
+.infos-box {
+    text-align: center;
+    margin: 20px;
+}
+
+.recension {
+    font-size: 30px;
+    font-weight: 400;
+    color: #eeeeee;
+    margin-top: 40px;
+}
+
+.recension-box {
+    width: 100%;
+    display: flex;
+    margin: 40px 0 60px 0;
+    background-color: rgba(238, 238, 238, 0.788);
+    border-radius: 5px;
+    box-shadow: 0 0 10px 1px #919191;
+    overflow: hidden;
+}
+
+.author-box {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.author-box .avatar {
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50px;
+    box-shadow: 0 0 15px 1px #2a6bf8;
+}
+
+.author-box .nick {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.content-box {
+    /* background-color: rgba(105, 105, 105, 0.418); */
+    background-color: #1f4cac;
+    padding: 20px;
+    width: 60%;
+    color: #eeeeee;
+}
+
+.content-box .content-title {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.content-box .content-text {
+    font-size: 18px;
+    line-height: 140%;
+}
+
+.rating-box {
+    background-color: rgba(255, 255, 255, 0.678);
+    padding: 20px;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rating-box fa-icon {
+    font-size: 50px;
+    color: #2a6bf8;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 15px #0051ff);
+}
+
+.rating {
+
+}
+
+.rating span {
+    font-size: 40px;
+    color: #2a6bf8;
+}

@@ -4,7 +4,7 @@
     <div class="games-container">
         <div *ngFor="let game of games">
             <div *ngIf="game.category == category.name">
-                <div class="game-box">
+                <div class="game-box" [routerLink]="['/games', game._id]">
                     <div class="img-half">
                         <img [src]="game.image" alt="Images">
                     </div>
