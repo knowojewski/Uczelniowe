@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { GamesComponent } from './games/games.component';
 import { ForumComponent } from './forum/forum.component';
 import { CategoriesComponent } from './games/categories/categories.component';
+import { CategoriesMainComponent } from './games/categories-main/categories-main.component';
+import { CategoryGamesComponent } from './games/category-games/category-games.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { CategoriesComponent } from './games/categories/categories.component';
     RegisterComponent,
     GamesComponent,
     ForumComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    CategoriesMainComponent,
+    CategoryGamesComponent
   ],
   imports: [
     BrowserModule,

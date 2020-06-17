@@ -1,0 +1,8 @@
+<div class="container">
+    <div class="cat-box" (click)="onSelect(category)" *ngFor="let category of categories">
+        <div class="image-div"><img [src]="category.image" alt="image"></div>
+        <div class="shadow-div"></div>
+        <h2>{{category.name.toUpperCase()}}</h2>
+        <p>{{category.description}}</p>
+    </div>
+</div>

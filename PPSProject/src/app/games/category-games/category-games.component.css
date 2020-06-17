@@ -1,0 +1,130 @@
+.container { width: 100%; }
+
+.cat-back {
+    display: flex;
+    width: 250px;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    margin-left: 50px;
+    transform: none;
+    transition: transform .3s;
+}
+
+fa-icon {
+    font-size: 30px;
+    margin-right: 10px;
+    color: #ffffff;
+    filter: drop-shadow(0 0 5px #000000);
+    transition: color .3s, filter .3s;
+}
+
+.cat-back:hover { transform: translate(-10px, 0); } 
+
+.cat-back:hover fa-icon { 
+    color: #2a6bf8; 
+    filter: drop-shadow(0 0 15px #333333);
+} 
+
+.cat-title {
+    /* text-align: center; */
+    width: 100%;
+    font-size: 30px;
+    font-weight: 400;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.games-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.game-box {
+    width: 300px;
+    height: 400px;
+    margin: 0 30px 50px 30px;
+    box-shadow: 0 0 15px 1px #333333;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform .3s, box-shadow .3s;
+}
+
+.img-half {
+    width: 100%;
+    height: 50%;
+}
+
+.img-half img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-half {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.text-half::before {
+    content: '';
+    position: absolute;
+    top: -22%;
+    left: -100%;
+    width: 100%;
+    height: 145%;
+    background-color: #2a6bf8;
+    transform: rotate(15deg);
+    transition: left .3s;
+    z-index: 0;
+} 
+
+.text-half h5 {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 400;
+    margin: 10px 0 20px 0;
+    transition: color .3s;
+    z-index: 1;
+}
+
+.parag {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: color .3s;
+    z-index: 1;
+}
+
+.rating {
+    color: #2a6bf8;
+    font-size: 25px;
+    justify-self: flex-end;
+    transition: color .3s;
+    z-index: 1;
+}
+
+.game-box:hover .text-half::before{ left: 0; }
+
+.game-box:hover .rating,
+.game-box:hover .text-half h5,
+.game-box:hover .parag { color: #ffffff; }
+
+.game-box:hover { 
+    box-shadow: 0 0 45px 15px #2a6bf8;
+    transform: scale(1.02); 
+}
+
+/* .game-box:hover .img-half img { transform: scale(1.02); } */

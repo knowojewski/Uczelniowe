@@ -2,13 +2,13 @@ import { Component, OnInit, EventEmitter } from '@angular/core';
 import { Categories } from '../categories';
 
 @Component({
-  selector: 'app-categories',
-  templateUrl: './categories.component.html',
-  styleUrls: ['./categories.component.css'],
-  inputs: ['categories'], 
+  selector: 'app-categories-main',
+  templateUrl: './categories-main.component.html',
+  styleUrls: ['./categories-main.component.css'],
+  inputs: ['categories'],
   outputs: ['SelectCategory']
 })
-export class CategoriesComponent implements OnInit {
+export class CategoriesMainComponent implements OnInit {
   public SelectCategory = new EventEmitter();
   constructor() { }
 
@@ -18,4 +18,5 @@ export class CategoriesComponent implements OnInit {
   onSelect(cat: Categories) {
     this.SelectCategory.emit(cat);
   }
+
 }
