@@ -1,5 +1,5 @@
 <div class="box">
     <ul class="cat-list">
-        <li class="cat-item" (click)="onSelect(cat)" *ngFor="let cat of categories"><a>{{cat.name}}</a></li>
+        <li class="cat-item" [routerLink]="['/games', cat.name]" *ngFor="let cat of categories"><a>{{cat.name}}</a></li>
     </ul>
 </div>

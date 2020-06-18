@@ -33,13 +33,20 @@
         </div>
     </div>
 </section>
-<section class="section-categories">
+<!-- <section class="section-categories">
     <app-categories (SelectCategory)="onSelectCategory($event)" [categories]="categories"></app-categories>
     <div class="container">
         <h1 *ngIf="!selectedCategory">Wybierz gatunek</h1>
         <h1 *ngIf="selectedCategory">Przeglądaj gry</h1>
         <app-categories-main (SelectCategory)="onSelectCategory($event)" *ngIf="!selectedCategory" [categories]="categories"></app-categories-main>
         <app-category-games *ngIf="selectedCategory" [category]="selectedCategory"></app-category-games>
+    </div> 
+</section> -->
+<section class="section-categories">
+    <app-categories [categories]="categories"></app-categories>
+    <div class="container">
+        <h1>Wybierz gatunek</h1>
+        <app-categories-main [categories]="categories"></app-categories-main>
     </div> 
 </section>
 

@@ -10,6 +10,8 @@ import { Categories } from '../categories';
 })
 export class CategoriesMainComponent implements OnInit {
   public SelectCategory = new EventEmitter();
+  categories: Categories;
+  
   constructor() { }
 
   ngOnInit(): void {

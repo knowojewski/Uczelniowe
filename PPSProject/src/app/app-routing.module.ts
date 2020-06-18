@@ -6,6 +6,7 @@ import { RegisterComponent } from './register/register.component';
 import { GamesComponent } from './games/games.component';
 import { ForumComponent } from './forum/forum.component';
 import { GameDetailsComponent } from './games/game-details/game-details.component';
+import { CategoryGamesComponent } from './games/category-games/category-games.component';
 
 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'games', component: GamesComponent},
   {path: 'forum', component: ForumComponent},
-  {path: 'games/:id', component: GameDetailsComponent}
+  {path: 'games/:name', component: CategoryGamesComponent},
+  {path: 'games/:name/:id', component: GameDetailsComponent}
 ];
 
 @NgModule({

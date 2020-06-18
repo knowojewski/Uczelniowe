@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Games } from './games';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+// import { Categories } from '../categories';
+import { GamesComponent } from '../games.component';
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-category-games',
@@ -10,19 +13,46 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 })
 export class CategoryGamesComponent implements OnInit {
   faArrowLeft = faArrowLeft;
+  private gamesComp = new GamesComponent;
+  categories = this.gamesComp.categories;
+  category: string;
+  currentCat: any;
 
-  games: Games[] = [
-    {_id: "1", category: "Strzelanki", title: "Gears of War", description: "Super rozpierducha.", image: "../../../assets/images/games/gears.jpg", rating: "4.6"},
-    {_id: "2", category: "Strzelanki", title: "Call of Duty", description: "Strzały, wybuch i zadyma!", image: "../../../assets/images/games/cod.png", rating: "4.5"},
-    {_id: "3", category: "Strzelanki", title: "Medal of Honor", description: "Strzały, wybuch i zadyma!", image: "../../../assets/images/games/medal.jpg", rating: "4.3"},
-    {_id: "4", category: "Strzelanki", title: "Battlefield", description: "Strzały, wybuch i zadyma!", image: "../../../assets/images/games/battle.jpg", rating: "4.7"},
-    {_id: "5", category: "Strzelanki", title: "Call of Duty Modern Warfare", description: "Strzały, wybuch i zadyma!", image: "../../../assets/images/games/codMW.jpg", rating: "4.8"},
-    {_id: "6", category: "Bijatyki", title: "Mortal Kombat", description: "Krwawe mordobicie.", image: "../../../assets/images/games/mortal.png", rating: "4.5"}
+  public games: Games[] = [
+    {_id: "1", category: "Strzelanki", title: "Gears of War", description: "Super rozpierducha.", image: "../../../assets/images/games/gears.jpg", rating: "4.6", longDescription: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam!", producer: "EA Games", publisher: "EA Games", publishDate: "21/11/2019"},
+
+    {_id: "2", category: "Strzelanki", title: "Call of Duty", description: "Strzały, wybuch i zadyma!", image: "../../../assets/images/games/cod.png", rating: "4.5", longDescription: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam!", producer: "EA Games", publisher: "EA Games", publishDate: "21/11/2019"},
+
+    {_id: "3", category: "Strzelanki", title: "Medal of Honor", description: "Strzały, wybuch i zadyma!", image: "../../../assets/images/games/medal.jpg", rating: "4.3", longDescription: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam!", producer: "EA Games", publisher: "EA Games", publishDate: "21/11/2019"},
+
+    {_id: "4", category: "Strzelanki", title: "Battlefield", description: "Strzały, wybuch i zadyma!", image: "../../../assets/images/games/battle.jpg", rating: "4.7", longDescription: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam!", producer: "EA Games", publisher: "EA Games", publishDate: "21/11/2019"},
+
+    {_id: "5", category: "Strzelanki", title: "Call of Duty Modern Warfare", description: "Strzały, wybuch i zadyma!", image: "../../../assets/images/games/codMW.jpg", rating: "4.8", longDescription: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam!", producer: "EA Games", publisher: "EA Games", publishDate: "21/11/2019"},
+
+    {_id: "6", category: "Bijatyki", title: "Mortal Kombat XI", description: "Krwawe mordobicie. Część 11.", image: "../../../assets/images/games/mortal.png", rating: "4.5", longDescription: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam!", producer: "EA Games", publisher: "EA Games", publishDate: "21/11/2019"},
+
+    {_id: "7", category: "Bijatyki", title: "Tekken 7", description: "Bijatyka na parkiecie", image: "../../../assets/images/games/tekken7.jpg", rating: "4.6", longDescription: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam!", producer: "EA Games", publisher: "EA Games", publishDate: "21/11/2019"},
+
+    {_id: "8", category: "Bijatyki", title: "Soul Calibur V", description: "Miecze, bicze i inne bronie do bitki.", image: "../../../assets/images/games/soulV.jpg", rating: "4.5", longDescription: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam!", producer: "EA Games", publisher: "EA Games", publishDate: "21/11/2019"},
+
+    {_id: "9", category: "Bijatyki", title: "Mortal Kombat X", description: "Krwawe mordobicie. Część 10.", image: "../../../assets/images/games/mortalX.jpg", rating: "4.2", longDescription: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam!", producer: "EA Games", publisher: "EA Games", publishDate: "21/11/2019"},
   ]
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) {
+    
+   }
 
   ngOnInit(): void {
+    // this.category = this.route.snapshot.paramMap.get("name");
+    this.route.paramMap.subscribe(params => {
+      this.category = params.get("name");
+    })
+
+    console.log(this.category);
+
+    this.currentCat = this.categories.find( cat => this.category == cat.name ? cat : null);
+
+    console.log(this.currentCat);
   }
 
 }
