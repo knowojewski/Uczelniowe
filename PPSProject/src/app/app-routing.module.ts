@@ -20,6 +20,8 @@ const routes: Routes = [
   {path: 'games/:name/:id', component: GameDetailsComponent}
 ];
 
+
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

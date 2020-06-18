@@ -6,10 +6,10 @@ import { Categories } from '../categories';
   templateUrl: './categories.component.html',
   styleUrls: ['./categories.component.css'],
   inputs: ['categories'], 
-  outputs: ['SelectCategory']
+  // outputs: ['SelectCategory']
 })
 export class CategoriesComponent implements OnInit {
-  public SelectCategory = new EventEmitter();
+  // public SelectCategory = new EventEmitter();
   categories: Categories;
 
   constructor() { }
@@ -17,7 +17,8 @@ export class CategoriesComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSelect(cat: Categories) {
-    this.SelectCategory.emit(cat);
-  }
+
+  // onSelect(cat: Categories) {
+  //   this.SelectCategory.emit(cat);
+  // }
 }

@@ -54,7 +54,7 @@
 }
 
 .hero-section:hover .hero-box h1 {
-    transform: scale(1.2);
+    transform: scale(1.05);
 }
 
 .games {

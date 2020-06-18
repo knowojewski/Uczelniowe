@@ -26,7 +26,7 @@ import { GameDetailsComponent } from './games/game-details/game-details.componen
     CategoriesComponent,
     CategoriesMainComponent,
     CategoryGamesComponent,
-    GameDetailsComponent
+    GameDetailsComponent,
   ],
   imports: [
     BrowserModule,

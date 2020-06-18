@@ -3,7 +3,8 @@ import { Games } from './games';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 // import { Categories } from '../categories';
 import { GamesComponent } from '../games.component';
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
+
 
 @Component({
   selector: 'app-category-games',
@@ -37,6 +38,7 @@ export class CategoryGamesComponent implements OnInit {
 
     {_id: "9", category: "Bijatyki", title: "Mortal Kombat X", description: "Krwawe mordobicie. Część 10.", image: "../../../assets/images/games/mortalX.jpg", rating: "4.2", longDescription: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga exercitationem nesciunt cupiditate! Dolores assumenda consequatur neque, soluta ut quia vitae inventore, accusamus fuga, quasi tempora corrupti. Possimus vel est veniam!", producer: "EA Games", publisher: "EA Games", publishDate: "21/11/2019"},
   ]
+  router: Router;
 
   constructor(private route: ActivatedRoute) {
     
@@ -54,5 +56,4 @@ export class CategoryGamesComponent implements OnInit {
 
     console.log(this.currentCat);
   }
-
 }
