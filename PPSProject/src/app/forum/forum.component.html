@@ -1,1 +1,79 @@
-<p>forum works!</p>
+<section class="section-hero" style="height: 100vh; padding: 200px;">
+    <div class="heading-box">
+        <h1>Witamy na <span>PRO</span>GAMERS forum.</h1>
+        <p>Gracze to wielkie community, a nasze forum pomaga jego rozwoju i poszerza je jeszcze bardziej!</p>
+        <div class="buttons">
+            <button class="btn btn-login" [routerLink]="'/register'">ZAREJESTRUJ SIĘ</button>
+            <button class="btn btn-games" (click)="scrollToThreads()">PRZEGLĄDAJ WĄTKI</button>
+        </div>
+    </div>
+</section>
+<section class="threadsCategories-section scroll-fix">
+    <div class="row">
+        <div class="wrapper-heading">   
+            <h1>Coś o naszym forum</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque fugiat possimus sed enim ipsa fuga debitis nemo saepe veritatis consequatur numquam necessitatibus culpa recusandae omnis officia, obcaecati, nobis voluptas reprehenderit, assumenda ad. Ipsum praesentium odit asperiores error pariatur saepe fugit?</p>
+        </div> 
+        <div class="threadsCategories-calc">
+            <div class="row-box">
+                <div class="box-count first">
+                    <div class="icon"><fa-icon [icon]="faComment"></fa-icon></div>
+                    <div class="text-count">
+                        <h5>ILOŚĆ WĄTKÓW</h5>
+                        <p>256</p>
+                    </div>
+                </div>
+                <div class="box-count second">
+                    <div class="icon"><fa-icon [icon]="faComments"></fa-icon></div>
+                    <div class="text-count">
+                        <h5>ILOŚĆ POSTÓW</h5>
+                        <p>1567</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row-box">
+                <div class="box-count third">
+                    <div class="icon"><fa-icon [icon]="faUsers"></fa-icon></div>
+                    <div class="text-count">
+                        <h5>ILOŚĆ UŻYTKOWNIKÓW</h5>
+                        <p>32</p>
+                    </div>
+                </div>
+                <div class="box-count fourth">
+                    <div class="icon"><fa-icon [icon]="faUser"></fa-icon></div>
+                    <div class="text-count">
+                        <h5>OSTATNI UŻYTKOWNIK</h5>
+                        <p>OrlandoKositrawa</p>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <div class="threadCategories-box" [routerLink]="'/forum/thread'">
+            <div class="image-div"><img src="../../assets/images/forum/threads/techniczne.jpg" alt="image"></div>
+            <div class="shadow-div"></div>
+            <h2>SPRAWY TECHNICZNE</h2>
+            <p>Tutaj możesz szukać pomocy jeśli masz problemy ze sprzętem. ⚙</p>
+        </div>
+
+        <div class="threadCategories-box" [routerLink]="'/forum/thread'">
+            <div class="image-div"><img src="../../assets/images/forum/threads/techniczne.jpg" alt="image"></div>
+            <div class="shadow-div"></div>
+            <h2>DYSKUSJE GAMINGOWE</h2>
+            <p>Newsy gamingowe, tipy do gier, itp. Ogólnie jedna wielka dyskusja o świecie gamingu! 🎮</p>
+        </div>
+
+        <div class="threadCategories-box" [routerLink]="'/forum/thread'">
+            <div class="image-div"><img src="../../assets/images/forum/threads/techniczne.jpg" alt="image"></div>
+            <div class="shadow-div"></div>
+            <h2>DYSKUSJE OFF-TOPIC</h2>
+            <p>Dział do dyskusji o wszystkim i niczym. Każdy potrzebuje czasem odmóżdżacza. 😉</p>
+        </div>
+
+        <div class="threadCategories-box" [routerLink]="'/forum/thread'">
+            <div class="image-div"><img src="../../assets/images/forum/threads/techniczne.jpg" alt="image"></div>
+            <div class="shadow-div"></div>
+            <h2>COMMUNITIES</h2>
+            <p>Tutaj łączymy się w grupy o wspólnych zainteresowaniach. Lubisz filmiki z kotami? Dołącz do CatLovers. 😺</p>
+        </div>
+    </div>
+</section>
