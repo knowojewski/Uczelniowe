@@ -9,7 +9,7 @@
 <section class="games">
     <app-categories [categories]="categories"></app-categories>
     <div class="container">
-        <a class="cat-back" href="/games"><fa-icon [icon]="faArrowLeft"></fa-icon>Powrót do kategorii</a>
+        <a class="cat-back" [routerLink]="['/games']"><fa-icon [icon]="faArrowLeft"></fa-icon>Powrót do kategorii</a>
         <h2 class="cat-title">Kategoria: {{currentCat.name}}</h2>
         <div class="games-container">
             <div *ngFor="let game of games">

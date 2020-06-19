@@ -7,6 +7,7 @@ import { GamesComponent } from './games/games.component';
 import { ForumComponent } from './forum/forum.component';
 import { GameDetailsComponent } from './games/game-details/game-details.component';
 import { CategoryGamesComponent } from './games/category-games/category-games.component';
+import { ThreadComponent } from './forum/thread/thread.component';
 
 
 const routes: Routes = [
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path: 'games', component: GamesComponent},
   {path: 'forum', component: ForumComponent},
   {path: 'games/:name', component: CategoryGamesComponent},
-  {path: 'games/:name/:id', component: GameDetailsComponent}
+  {path: 'games/:name/:id', component: GameDetailsComponent},
+  {path: 'forum/thread', component: ThreadComponent}
 ];
 
 
