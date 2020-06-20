@@ -18,7 +18,7 @@ export class ForumComponent implements OnInit {
   }
 
   scrollToThreads() {
-    const threads = document.querySelector('.threads-section');
+    const threads = document.querySelector('.threadsCategories-section');
     threads.scrollIntoView({behavior: "smooth"});
   }
 

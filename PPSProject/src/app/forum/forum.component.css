@@ -88,10 +88,6 @@
 .threadsCategories-section {
 }
 
-.scroll-fix {
-    position: relative;
-}
-
 .scroll-fix::before{
     content: '';
     display: block;
