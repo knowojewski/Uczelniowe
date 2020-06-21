@@ -8,6 +8,7 @@ import { ForumComponent } from './forum/forum.component';
 import { GameDetailsComponent } from './games/game-details/game-details.component';
 import { CategoryGamesComponent } from './games/category-games/category-games.component';
 import { ThreadComponent } from './forum/thread/thread.component';
+import { ThreadDetailsComponent } from './forum/thread-details/thread-details.component';
 
 
 const routes: Routes = [
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path: 'forum', component: ForumComponent},
   {path: 'games/:name', component: CategoryGamesComponent},
   {path: 'games/:name/:id', component: GameDetailsComponent},
-  {path: 'forum/thread', component: ThreadComponent}
+  {path: 'forum/thread', component: ThreadComponent},
+  {path: 'forum/thread/details', component: ThreadDetailsComponent}
 ];
 
 
