@@ -13,12 +13,12 @@
             <p>Załóż wątek na naszym forum i przekonaj się, że każdy problem da się rozwiązać!</p>
         </div>
         <div class="thread">
-            <div class="main-side">
+            <div class="main-side" [routerLink]="'/forum/thread/details'">
                 <img src="../../../assets/images/forum/SVG/LeftTriangle.svg" alt="Some decoration" class="left-tri">
                 <img src="../../../assets/images/forum/SVG/RightTriangle.svg" alt="Some decoration" class="right-tri">
                 <div class="main-content">
                     <p class="thread-category">SPRAWY SPRZĘTOWE</p>
-                    <h2>Tytuł posta, jakis se tytuł</h2>
+                    <h2>Tytuł posta, jakis se tytuł. Musi być trochę dłuższy do testowania.</h2>
                     <p class="thread-info">Ostatni post: 22 / 08 / 2020</p>
                     <p class="thread-info">Ilość postów: 14</p>
                 </div>
@@ -26,13 +26,12 @@
             <div class="author-side">
                 <p class="author-date">21/ 08 / 2020</p>
                 <div class="author">
-                    <div class="author-avatar">
-                        <!-- <img src="../../../assets/images/forum/avataaars.png" alt="Avatar"> -->
-                    </div>
+                    <div class="author-avatar"></div>
                     <h4 class="author-nick">Stefan Batory</h4>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section style="height: 100vh;"></section>
+<section style="height: 100vh;">
+</section>

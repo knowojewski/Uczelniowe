@@ -102,6 +102,8 @@
     box-shadow: 0 0 15px 1px #333333;
     border-radius: 4px;
     overflow: hidden;
+    transform: none;
+    transition: transform .3s, box-shadow .3s; 
 }
 
 .main-side {
@@ -110,7 +112,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    padding-left: 90px;
+    padding: 0 90px;
     width: 70%;
     cursor: pointer;
 }
@@ -202,6 +204,17 @@
     font-weight: 400;
 }
 
+.thread:hover {
+    transform: scale(1.008);
+    box-shadow: 0 0 35px 5px #2a6bf8;
+}
+
+
+
+
+
+
+
 @keyframes shadow-anim {
     0% {
         box-shadow: 0 0 5px 1px #2a6bf8;
@@ -223,16 +236,5 @@
     }
     100% {
         box-shadow: 0 0 60px 15px #4983ff;
-    }
-}
-
-@keyframes triangle-anim {
-    from {
-        top: 0;
-        left: 0;
-    }
-    to {
-        right: 0;
-        bottom: 0;
     }
 }
