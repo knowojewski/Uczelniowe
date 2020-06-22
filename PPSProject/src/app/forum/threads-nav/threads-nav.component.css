@@ -1,0 +1,128 @@
+.container {
+    position: fixed;
+    top: 120px;
+    padding-bottom: 20px;
+    left: 0;
+    z-index: 10;
+}
+
+.show-menu {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 13px;
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+    background: linear-gradient(to bottom right, #2a6bf8, #333333);
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 0 15px 1px #333333;
+}
+
+.show-menu span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 50px;
+}
+
+.first {
+    transform: translateX(10%);
+}
+
+.second {
+    opacity: 1;
+    transform: none;
+    transition: opacity .3s;
+}
+
+.third {
+    transform: translateX(-10%);
+}
+
+.first-change {
+    transform-origin: left;
+    transform: rotateZ(45deg);
+}
+
+.second-change {
+    opacity: 0;
+}
+
+.third-change {
+
+}
+
+.nav {
+    position: relative;
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    padding-bottom: 20px;
+    margin-top: 10px;
+    transform: translateX(-100%);
+    transition: transform .3s;
+}
+
+.show {
+    transform: translateX(0);
+}
+
+.nav-list {
+    list-style: none;
+    padding: 20px;
+}
+
+.nav-item {
+    padding: 40px 0;
+}
+
+.nav-item a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-size: 300;
+    padding-bottom: 10px;
+}
+
+.nav-item a::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(to right, #ccc, #ccc);
+    bottom: 0;
+    left: 0;
+    transition: width .3s, background-color .3s;
+}
+
+.nav-item a:hover::after {
+    background: linear-gradient(to right, #ccc, #2a6bf8);
+    width: 100%;
+}
+
+.nav-info {
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.nav-info a {
+    text-decoration: none;
+    color: #2a6bf8;
+    font-weight: bold;
+    filter: none;
+    transition: filter .3s;
+}
+
+.nav-info a:hover {
+    filter: drop-shadow(0 0 10px #fff);
+}
+
+
+
