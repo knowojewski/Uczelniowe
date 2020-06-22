@@ -16,6 +16,7 @@ import { CategoryGamesComponent } from './games/category-games/category-games.co
 import { GameDetailsComponent } from './games/game-details/game-details.component';
 import { ThreadComponent } from './forum/thread/thread.component';
 import { ThreadDetailsComponent } from './forum/thread-details/thread-details.component';
+import { ThreadsNavComponent } from './forum/threads-nav/threads-nav.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ThreadDetailsComponent } from './forum/thread-details/thread-details.co
     GameDetailsComponent,
     ThreadComponent,
     ThreadDetailsComponent,
+    ThreadsNavComponent,
   ],
   imports: [
     BrowserModule,

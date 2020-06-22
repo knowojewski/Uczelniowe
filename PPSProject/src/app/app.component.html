@@ -1,17 +1,17 @@
 <nav>
-  <a href="/home" class="logo"><fa-icon [icon]="faHeadphones"></fa-icon><span>PRO</span>GAMERS</a>
+  <a routerLink="/home" class="logo"><fa-icon [icon]="faHeadphones"></fa-icon><span>PRO</span>GAMERS</a>
   <ul class="nav-list">
     <li class="nav-item">
-      <a href="/home">strona główna</a>
+      <a routerLink="/home"><fa-icon [icon]="faHome"></fa-icon></a>
     </li>
     <li class="nav-item">
-      <a href="/games">baza gier</a>
+      <a routerLink="/games"><fa-icon [icon]="faGamepad"></fa-icon></a>
     </li>
     <li class="nav-item">
-      <a href="/forum">forum</a>
+      <a routerLink="/forum"><fa-icon [icon]="faComments"></fa-icon></a>
     </li>
     <li class="nav-item">
-      <a href="/login">zaloguj</a>
+      <a routerLink="/login"><fa-icon [icon]="faSignInAlt"></fa-icon></a>
     </li>
   </ul>
 </nav>
@@ -20,10 +20,10 @@
 <footer>
   <div class="row">
     <ul class="footer-nav">
-      <li class="footer-nav-item"><a href="#">Strona główna</a></li>
-      <li class="footer-nav-item"><a href="#">Baza gier</a></li>
-      <li class="footer-nav-item"><a href="#">Forum</a></li>
-      <li class="footer-nav-item"><a href="#">Zaloguj</a></li>
+      <li class="footer-nav-item"><a routerLink="/home"><fa-icon [icon]="faHome"></fa-icon></a></li>
+      <li class="footer-nav-item"><a routerLink="/games"><fa-icon [icon]="faGamepad"></fa-icon></a></li>
+      <li class="footer-nav-item"><a routerLink="/forum"><fa-icon [icon]="faComments"></fa-icon></a></li>
+      <li class="footer-nav-item"><a routerLink="/login"><fa-icon [icon]="faSignInAlt"></fa-icon></a></li>
     </ul>
     <p>All rights reserved &copy; PROGAMERS 2020</p>
   </div>
