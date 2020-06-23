@@ -1,0 +1,209 @@
+.profile-hero {
+    position: relative;
+    background-image: linear-gradient(hsla(0, 0%, 0%, 0.8), hsla(0, 0%, 0%, 0.8)), url(../../assets/images/login-hero.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-box {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 130px 0 80px 0;
+    color: #ffffff;
+    background-color: #000000dc;
+    border-radius: 5px;
+    box-shadow: 0 10px 40px 5px #2a6bf8;
+}
+
+.profile-box h1 {
+    font-size: 40px;
+    font-weight: 400;
+    margin: 30px 0;
+    color: #2a6bf8;
+}
+
+.profile-box h1::after {
+    display: block;
+    height: 2px;
+    background-color: #2a6bf8;
+    content: '';
+    width: 40%;
+    margin: 20px auto 0 auto;
+}
+
+.profile-info {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.data-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.infos-box {
+    width: 100%;
+    border-bottom: 2px solid #2a6bf8;
+    margin-bottom: 10px;
+}
+
+.infos-box label {
+    display: inline-block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.infos-box p {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.buttons {
+    margin: 30px 0;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn {
+    width: 48%;
+    height: 40px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+    color: #2a6bf8;
+}
+
+.btn-profile {
+    background-color: #fff;
+    box-shadow: 0 0 10px 1px #2a6bf8;
+    transition: color .3s, background-color .3s, box-shadow .3s;
+}
+
+.btn-cancel {
+    background-color: transparent;
+    box-shadow: 0 0 10px 1px #2a6bf8;
+    transition: color .3s, background-color .3s, box-shadow .3s;
+}
+
+.btn-profile:hover{
+    color: #fff;
+    background-color: #2a6bf8;
+    box-shadow: 0 0 20px 5px #2a6bf8;
+}
+
+.btn-cancel:hover{
+    color: #fff;
+    background-color: #2a6bf8;
+    box-shadow: 0 0 20px 5px #2a6bf8;
+}
+
+.modal {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.952);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+
+.modal-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    background-color: #00000086;
+    border-radius: 5px;
+    box-shadow: 0 0 50px 2px #2a6bf8;
+}
+
+.edit-data {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    padding: 20px;
+}
+
+.modal-row {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.input-class {
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    background-color: transparent;
+    border-bottom: 2px solid #2a6bf8;
+    border-radius: 5px;
+    transition: all .3s;
+}
+
+.input-class:focus {
+    outline: none;
+    box-shadow: 0 0 10px 1px #2a6bf8;
+    border-bottom: 2px solid transparent;       
+}
+
+.label-class {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.edit-infos { display: none; }
+
+.edit-pass { display: none; }
+
+.shares-wrapper {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.shares-show {
+    height: 100px;
+    width: 49%;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shares-show h2 {
+    font-weight: 400;
+    font-size: 30px;
+}

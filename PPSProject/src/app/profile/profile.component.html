@@ -1,0 +1,120 @@
+<section class="profile-hero">
+    <div class="profile-box">
+        <h1>Witaj GringoMuchachoMadre!</h1>
+        <p class="profile-info">Tutaj znajdują się informacje o twoim profilu oraz Twoje założone wątki i napisane recenzje.</p>
+        <div class="data-row">
+            <div class="infos-box">
+                <label for="firstName" class="label-class">Imię:</label>
+                <p class="info-class" id="firstName">Kamil</p>
+            </div>
+
+            <div class="infos-box">
+                <label for="lastName" class="label-class">Nazwisko:</label>
+                <p class="info-class" id="lastName">Nowojewski</p>
+            </div> 
+            
+            <div class="infos-box">
+                <label for="nickName" class="label-class">Login:</label>
+                <p class="info-class" id="nickName">GringoMuchachoMadre</p>
+            </div> 
+
+            <div class="infos-box">
+                <label for="eMail" class="label-class">E-mail:</label>
+                <p class="info-class" id="eMail">gringo@gmail.com</p>
+            </div> 
+        </div>
+        <div class="buttons">
+            <button (click)="editUserInfos()" class="btn btn-profile">EDYTUJ PROFIL</button>
+            <button (click)="editUserPassword()" class="btn btn-profile">ZMIEŃ HASŁO</button>
+        </div>
+    </div>
+
+    <div class="shares-wrapper">
+        <div class="shares-show threads-show">
+            <h2><fa-icon [icon]="faArrowDown"></fa-icon>Pokaż moje wątki</h2>
+        </div>
+
+        <div class="shares-show recensions-show">
+            <h2>Pokaż moje recenzje<fa-icon [icon]="faArrowDown"></fa-icon></h2>
+        </div>
+
+        <div class="threads-box">
+
+        </div>
+
+        <div class="recensions-box">
+            
+        </div>
+    </div>
+
+    <div (click)="closeModalOutside($event)" class="modal edit-infos">
+        <div class="modal-box">
+            <h3 class="edit-data">Edytuj dane</h3>
+            <form (submit)="saveEditedInfos()" class="form-row">
+                <div class="modal-row">
+                        <label for="firstName" class="label-class">Imię:</label>
+                        <input type="text" name="first_name" id="firstName" class="input-class" required>
+            
+                        <label for="lastName" class="label-class">Nazwisko:</label>
+                        <input type="text" name="last_name" id="lastName" class="input-class">
+            
+                        <label for="nickName" class="label-class">Login:</label>
+                        <input type="text" name="login" id="nickName" class="input-class">
+                </div>
+                <div class="buttons">
+                    <input type="submit" class="btn btn-profile" value="ZAPISZ">
+                    <button (click)="closeModal()" class="btn btn-cancel">ANULUJ</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div (click)="closePassModalOutside($event)" class="modal edit-pass">
+        <div class="modal-box">
+            <h3 class="edit-data">Edytuj hasło</h3>
+            <form (submit)="saveEditedPass()" class="form-row">
+                <div class="modal-row">
+                        <label for="password" class="label-class">Podaj stare hasło:</label>
+                        <input type="text" name="password" id="password" class="input-class" required>
+            
+                        <label for="passwordNew" class="label-class">Podaj nowe hasło:</label>
+                        <input type="text" name="passwordNew" id="passwordNew" class="input-class">
+                </div>
+                <div class="buttons">
+                    <input type="submit" class="btn btn-profile" value="ZAPISZ">
+                    <button (click)="closePassModal()" class="btn btn-cancel">ANULUJ</button>
+                </div>
+            </form> 
+        </div>
+    </div>
+</section>
+
+
+
+<!-- <form (submit)="profileUser()" class="form-row">
+    <div class="data-row">
+        <div class="data-row-half">
+            <label for="firstName" class="label-class">Imię:</label>
+            <input type="text" [(ngModel)]="first_name" name="first_name" id="firstName" class="input-class" required>
+
+            <label for="lastName" class="label-class">Nazwisko:</label>
+            <input type="text" [(ngModel)]="last_name" name="last_name" id="lastName" class="input-class">
+
+            <label for="nickName" class="label-class">Login:</label>
+            <input type="text" [(ngModel)]="login" name="login" id="nickName" class="input-class">
+        </div>
+
+        <div class="data-row-half">
+            <label for="e-mail" class="label-class">E-mail:</label>
+            <input type="text" [(ngModel)]="e_mail" name="e_mail" id="e-mail" class="input-class">
+
+            <label for="password" class="label-class">Hasło:</label>
+            <input type="password" [(ngModel)]="password" name="password" id="password" class="input-class">
+
+            <label for="password-rep" class="label-class">Potwierdź hasło:</label>
+            <input type="password" id="password-rep" class="input-class">
+        </div>
+    </div>
+    <input type="submit" class="btn btn-profile" value="ZAREJESTRUJ SIĘ">
+    <button [routerLink]="'/home'" class="btn btn-cancel">ANULUJ</button>
+</form> -->
