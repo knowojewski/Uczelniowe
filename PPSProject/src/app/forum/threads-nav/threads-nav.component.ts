@@ -19,18 +19,21 @@ export class ThreadsNavComponent implements OnInit {
 
   onMenuShow() {
     const nav = document.querySelector('.nav');
-    const second = document.querySelector('.second')
     const first = document.querySelector('.first')
+    const second = document.querySelector('.second')
+    const third = document.querySelector('.third')
     
 
     if(!nav.classList.contains('show')) {
       nav.classList.add('show');
       first.classList.add('first-change');
       second.classList.add('second-change');
+      third.classList.add('third-change');
     } else {
       nav.classList.remove('show');
       first.classList.remove('first-change');
       second.classList.remove('second-change');
+      third.classList.remove('third-change');
     }
   }
 

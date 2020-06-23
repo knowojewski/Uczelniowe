@@ -242,6 +242,7 @@
 
 .see-comments:hover::before { left: -800px; } 
 
+
 .comments {
     max-width: 1200px;
     margin: 5px auto 0px auto;
