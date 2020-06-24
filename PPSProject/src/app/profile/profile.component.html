@@ -30,20 +30,75 @@
     </div>
 
     <div class="shares-wrapper">
-        <div class="shares-show threads-show">
+        <div (click)="showMyThreads()" class="shares-show threads-show">
             <h2><fa-icon [icon]="faArrowDown"></fa-icon>Pokaż moje wątki</h2>
         </div>
 
-        <div class="shares-show recensions-show">
+        <div (click)="showMyRecensions()" class="shares-show recensions-show">
             <h2>Pokaż moje recenzje<fa-icon [icon]="faArrowDown"></fa-icon></h2>
+        </div>
+    </div>
+
+    <div class="threads-wrapper">
+        <div class="threads-box">
+            <div class="thread">
+                <div class="main-side" [routerLink]="'/forum/thread/details'">
+                    <img src="../../../assets/images/forum/SVG/LeftTriangle.svg" alt="Some decoration" class="left-tri">
+                    <img src="../../../assets/images/forum/SVG/RightTriangle.svg" alt="Some decoration" class="right-tri">
+                    <div class="main-content">
+                        <p class="thread-category">SPRAWY SPRZĘTOWE</p>
+                        <h2>Tytuł posta, jakis se tytuł. Musi być trochę dłuższy do testowania.</h2>
+                        <p class="thread-info">Ostatni post: 22 / 08 / 2020</p>
+                        <p class="thread-info">Ilość postów: 14</p>
+                    </div>
+                </div>
+                <div class="author-side">
+                    <p class="author-date">21 / 08 / 2020</p>
+                    <div class="author">
+                        <div class="author-avatar"></div>
+                        <h4 class="author-nick">Stefan Batory</h4>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="threads-box">
+            <div class="thread">
+                <div class="main-side" [routerLink]="'/forum/thread/details'">
+                    <img src="../../../assets/images/forum/SVG/LeftTriangle.svg" alt="Some decoration" class="left-tri">
+                    <img src="../../../assets/images/forum/SVG/RightTriangle.svg" alt="Some decoration" class="right-tri">
+                    <div class="main-content">
+                        <p class="thread-category">SPRAWY SPRZĘTOWE</p>
+                        <h2>Tytuł posta, jakis se tytuł. Musi być trochę dłuższy do testowania.</h2>
+                        <p class="thread-info">Ostatni post: 22 / 08 / 2020</p>
+                        <p class="thread-info">Ilość postów: 14</p>
+                    </div>
+                </div>
+                <div class="author-side">
+                    <p class="author-date">21 / 08 / 2020</p>
+                    <div class="author">
+                        <div class="author-avatar"></div>
+                        <h4 class="author-nick">Stefan Batory</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="recension-wrapper">
+        <div class="recension-box">
+            <p>Jakas recenzja</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum natus ipsa a expedita voluptates in cum sequi officiis, quos soluta doloremque dicta? Earum ab voluptates itaque iure in accusamus ipsa.</p>
         </div>
 
-        <div class="recensions-box">
-            
+        <div class="recension-box">
+            <p>Jakas recenzja</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum natus ipsa a expedita voluptates in cum sequi officiis, quos soluta doloremque dicta? Earum ab voluptates itaque iure in accusamus ipsa.</p>
+        </div>
+
+        <div class="recension-box">
+            <p>Jakas recenzja</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum natus ipsa a expedita voluptates in cum sequi officiis, quos soluta doloremque dicta? Earum ab voluptates itaque iure in accusamus ipsa.</p>
         </div>
     </div>
 

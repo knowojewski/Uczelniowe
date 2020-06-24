@@ -67,4 +67,29 @@ export class ProfileComponent implements OnInit {
     editPass.setAttribute('style', 'display: none;')
   }
 
+  showMyThreads() {
+    const threads = document.querySelector('.threads-wrapper');
+    const recensions = document.querySelector('.recension-wrapper');
+
+    recensions.classList.remove('show');
+
+    if (!threads.classList.contains('show')) {
+      threads.classList.add('show');
+    } else {
+      threads.classList.remove('show');
+    }
+  }
+
+  showMyRecensions() {
+    const recensions = document.querySelector('.recension-wrapper');
+    const threads = document.querySelector('.threads-wrapper');
+
+    threads.classList.remove('show');
+
+    if (!recensions.classList.contains('show')) {
+      recensions.classList.add('show');
+    } else {
+      recensions.classList.remove('show');
+    }
+  }
 }
